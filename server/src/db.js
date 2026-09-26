@@ -211,6 +211,10 @@ export function initDatabase() {
       db.exec("ALTER TABLE resources ADD COLUMN transport_rate_per_km REAL DEFAULT NULL");
       console.log('✅ Added transport_rate_per_km column to resources table.');
     }
+  } catch (err) {
+    console.error('Migration error checking resources transport columns:', err);
+  }
+
   // Backfill existing rows with safe non-null defaults
   try {
     db.exec(`
