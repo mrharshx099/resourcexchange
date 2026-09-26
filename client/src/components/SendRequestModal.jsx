@@ -51,6 +51,39 @@ export default function SendRequestModal({ resource, isOpen, onClose, onSuccess 
   const [transportNotes, setTransportNotes] = useState('');
   const [logisticsEstimate, setLogisticsEstimate] = useState(null);
 
+  const distanceKm = useMemo(() => {
+    return calculateDistanceKm(
+      currentUser?.lat,
+      currentUser?.lng,
+      resource?.lat,
+      resource?.lng
+    );
+  }, [currentUser?.lat, currentUser?.lng, resource?.lat, resource?.lng]);
+
+  useEffect(() => {
+    if (!isOpen || !resource || !needsTransport) return;
+    let isMounted = true;
+    api.getLogisticsEstimate(distanceKm, resource?.id)
+      .then((data) => {
+        if (isMounted) setLogisticsEstimate(data);
+      })
+      .catch((err) => {
+        if (!isMounted) return;
+        console.error('Failed to fetch logistics estimate:', err);
+        const rate = resource?.transport_rate_per_km || 2.5;
+        const total = Math.round((25 + distanceKm * rate) * 100) / 100;
+        setLogisticsEstimate({
+          distance_km: distanceKm,
+          base_fee: 25,
+          rate_per_km: rate,
+          total_fee: total
+        });
+      });
+    return () => {
+      isMounted = false;
+    };
+  }, [isOpen, needsTransport, distanceKm, resource?.id, resource?.transport_rate_per_km]);
+
   if (!isOpen || !resource) return null;
 
   // Calculate pricing
@@ -70,32 +103,6 @@ export default function SendRequestModal({ resource, isOpen, onClose, onSuccess 
   const standardTotal = resource.pricing_unit === 'hour'
     ? (resource.price_per_hour * 8 * days * Number(requestedQty || 1))
     : (resource.price_per_day * days * Number(requestedQty || 1));
-
-  const distanceKm = useMemo(() => {
-    return calculateDistanceKm(
-      currentUser?.lat,
-      currentUser?.lng,
-      resource?.lat,
-      resource?.lng
-    );
-  }, [currentUser?.lat, currentUser?.lng, resource?.lat, resource?.lng]);
-
-  useEffect(() => {
-    if (!needsTransport) return;
-    api.getLogisticsEstimate(distanceKm, resource?.id)
-      .then((data) => setLogisticsEstimate(data))
-      .catch((err) => {
-        console.error('Failed to fetch logistics estimate:', err);
-        const rate = resource?.transport_rate_per_km || 2.5;
-        const total = Math.round((25 + distanceKm * rate) * 100) / 100;
-        setLogisticsEstimate({
-          distance_km: distanceKm,
-          base_fee: 25,
-          rate_per_km: rate,
-          total_fee: total
-        });
-      });
-  }, [needsTransport, distanceKm, resource?.id, resource?.transport_rate_per_km]);
 
   const transportFee = (needsTransport && logisticsEstimate) ? Number(logisticsEstimate.total_fee || 0) : 0;
   const baseResourcePrice = offerPrice ? Number(offerPrice) : standardTotal;
