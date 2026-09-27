@@ -1,0 +1,26 @@
+# Hospitality Resource Matching Engine Criteria & Domain Compatibility
+
+Effective resource matching in local hospitality networks relies on multi-dimensional compatibility rather than simplistic keyword searching. The ResourceXchange smart matching engine evaluates five core domain factors:
+
+1. Geographic Proximity & Transport Radius (Haversine Distance):
+Because hospitality and event logistics involve physical transit of personnel, raw ingredients, delicate decor, and heavy AV road cases, physical distance directly dictates operational feasibility:
+- Under 3 km: Ultra-local tier (Match score 90-98%). Enables seamless shuttling, rapid kitchen replenishment, or minimal transport wear.
+- 3 km to 10 km: Standard metropolitan operating zone (Match score 80-89%). Feasible with standard delivery vehicles or courier dispatch.
+- Over 15 km: Regional tier (Match score degrades sharply). Risk of catering temperature breaches in traffic or extended crew transit time.
+
+2. Capacity & Throughput Fit:
+Matching requires aligning the physical or culinary scale with the event requirement:
+- Guest Headcount vs Venue Capacity: Venues operating between 60% and 90% of certified fire-code capacity achieve optimal balance between acoustic intimacy and guest comfort. Matching an 80-guest gathering into a 700-seat ballroom results in poor atmosphere and disproportionate heating/cooling overhead, whereas exceeding 95% capacity risks guest congestion and service bottlenecks.
+- Culinary Production Capacity: Kitchen match scores weigh meal-per-hour output (e.g. 500 meals/hr combi capacity) against the caterer's target banquet count, ensuring adequate refrigerator cubic feet and range burners.
+
+3. Availability & Zero-Collision Calendar Scheduling:
+Hospitality operations cannot tolerate double-bookings. The matching engine checks real-time calendar availability slots, rejecting any resources with conflicting hard bookings or scheduled maintenance blocks. It checks both start and end date/time bounds, accounting for necessary setup (load-in) and strike (load-out) buffer periods.
+
+4. Provider Verification & Reputation Trust Index:
+B2B counterparties require mutual confidence that venues and equipment will be delivered as represented. The trust algorithm incorporates:
+- Star rating and verified review history from peer hospitality businesses.
+- Transaction completion rate (penalizing unilateral provider cancellations).
+- DOH and safety certifications (especially for food preparation and electrical rigging).
+
+5. Budget Alignment & Elasticity:
+The matching algorithm compares the seeker's stated budget cap or custom offer against historical closed transaction prices and the provider's standard rack rate. Price alignment calculates whether a gap can be reasonably bridged via standard B2B negotiation ranges (e.g., within 15-25% margin).

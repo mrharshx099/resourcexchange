@@ -1,0 +1,24 @@
+# Hospitality Resource Pricing Norms & B2B Commercial Standards
+
+Pricing structures in shared hospitality facilities reflect capital intensity, operating wear-and-tear, utility consumption, and perishable calendar availability:
+
+1. Pricing Units & Minimum Booking Commitments:
+- Banquet Spaces & Ballrooms: Usually quoted on a full-day (12-14 hour window) or half-day basis, with standard minimum commitment blocks (e.g., 4 to 6 hours). Hourly rates apply primarily to setup/teardown extensions or daylight corporate breakout sessions.
+- Commercial Kitchens: Typically priced per 4-hour or 8-hour shift, or hourly with minimum 3-hour blocks to justify kitchen sanitization, prep station walkthroughs, and utility ramp-up.
+- AV Equipment & Stage Lighting: Quoted on standard 24-hour day rates. In industry practice, multi-day bookings apply a sliding scale: 2 days = 1.5x day rate; 3-4 days = 2x day rate; 7 days (weekly) = 3x day rate.
+- Refrigerated Fleet: Charged via a combined day rate (covering vehicle lease and wear) plus a per-mile or per-kilometer rate (e.g., $2.50 to $4.00 per km) plus fuel replenishment.
+
+2. Seasonal & Calendar Yield Dynamics:
+Hospitality assets have zero residual value once a calendar date has passed without occupancy.
+- Peak Demand Windows: Friday evening through Sunday evening, major holiday eves, and convention weeks command 100% to 115% of standard rack rates. Heavy demand limits discount tolerance.
+- Off-Peak Windows: Monday through Thursday daytime slots and post-holiday seasonal lulls warrant flexible commercial concessions, typically 15% to 25% below prime rack rates to monetize idle facility overhead.
+- Last-Minute / Distress Inventory: Booking requests submitted within 48 to 72 hours for unreserved dates allow deeper concessions (20% to 30% discount) because capturing partial revenue outweighs leaving the asset empty.
+
+3. Deposit Conventions & Ancillary Surcharges:
+Standard B2B contracts incorporate a 20% to 30% refundable security deposit to guard against equipment breakage, grease trap overflow, or deep-cleaning requirements. Turnover fees (sanitizing commercial kitchens, vacuuming ballroom carpets, or restocking AV cabling) are either bundled into the base fee or explicitly itemized when heavy food production or elaborate set construction is involved.
+
+4. B2B Negotiation Etiquette & Fair Pricing Guidelines:
+When a peer seeker (such as a neighboring caterer or independent event organizer) submits a booking proposal, professional peer etiquette expects serious bids to reflect market realities:
+- Fair Bid Range: Realistic counter-offers typically land between 75% and 90% of listed price for standard bookings, or 65% to 75% for mid-week distressed slots.
+- Bad-Faith Lowballing: Offers under 60% of the listed rate are generally rejected as unviable, as they fail to cover utility overhead, staff supervision, and wear-and-tear.
+- Collaborative Concessions: Providers countered with lower price points frequently negotiate non-price concessions—such as shifted access windows (e.g., requiring load-in to conclude before noon), self-managed post-event cleanup, or multi-date bundle commitments.

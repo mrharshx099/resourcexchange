@@ -1,0 +1,18 @@
+# Hospitality Resource Categories & Asset Class Specifications
+
+In the B2B hospitality and event production ecosystem, shared assets fall into five primary operational categories:
+
+1. Banquet Halls, Ballrooms & Event Spaces:
+Hospitality venues frequently maintain unbooked ballroom inventory during mid-week windows, daytime corporate gaps, or shoulder seasons. Key asset features include clear ceiling height, unobstructed sightlines, dedicated pre-function foyers for cocktail registration, integrated intelligent lighting, sound damping, and loading dock access. Terminology encompasses turnover windows (the operational buffer needed between consecutive events for teardown and reset), maximum guest capacity across various seating formats (banquet rounds, theater style, classroom, or standing reception), and decibel curfews mandated by municipal noise ordinances. Typical use cases include corporate summits, gala dinners, wedding banquets, and boutique exhibitions.
+
+2. Commercial Kitchens & Food Production Suites:
+Licensed culinary prep space is a critical scarce resource for off-premise caterers, artisan food producers, and popup restaurateurs. Infrastructure specifications include DOH/health department certified facilities, 10-burner gas ranges, commercial convection and Rational combi ovens, 40-gallon tilting kettles, walk-in blast chillers, walk-in freezers, stainless steel triple sinks, and commercial grease traps. Terminology includes shift blocks (morning bakery prep from 04:00 to 12:00, evening catering prep from 16:00 to 00:00), cross-contamination prevention zones, and HACCP compliance logs. Off-peak night shifts and dark kitchen hours represent prime idle capacity for sharing.
+
+3. Valet Parking & Vehicle Staging Facilities:
+Hotels, event centers, and commercial garages experience complementary demand curves. Assets range from secure subterranean parking bays and surface parking lots to dedicated valet drop-off lanes and bus/coach staging stalls. Terminology includes bay turnover rate, stack parking protocols, shuttle transit corridors, and attendant-to-vehicle staffing ratios. Use cases involve catering overflow parking during private weekend events, staging tour buses, and valet capacity sharing between adjacent downtown hotels and banquet facilities.
+
+4. AudioVisual (AV), Stage Production & Lighting Systems:
+Live events demand specialized AV packages that venues and staging companies own but leave idle between weekend bookings. Key inventory includes line array speaker elements (e.g. L-Acoustics, d&b), subwoofers, digital mixing consoles (e.g. Midas M32, Yamaha QL5), wireless RF microphone kits with frequency coordination, modular P2.6/P3.9 indoor/outdoor LED video walls, video switchers, truss ground support rigging, and intelligent DMX moving fixtures. Terminology includes load-in/strike time, power distribution requirements (3-phase 100A/200A camlock disconnects), and signal latency.
+
+5. Refrigerated Fleet & Temperature-Controlled Transport:
+Transporting delicate multi-course menus, iced seafood, floral arrangements, and perishable catering goods requires specialized vehicles. Asset classes include high-roof Mercedes Sprinter vans and 24-foot freight box trucks equipped with dual-zone refrigeration (capable of -20°C deep freeze and +4°C fresh chilled goods), hydraulic tuckaway liftgates, and cargo E-track securement straps. Terminology encompasses payload capacity, thermal log compliance, and mileage rate structures.

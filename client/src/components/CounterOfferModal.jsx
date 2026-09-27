@@ -22,7 +22,7 @@ export default function CounterOfferModal({ request, isOpen, onClose, onSuccess 
       if (res && res.suggestedPrice) {
         setCounterPrice(res.suggestedPrice);
         setSuggestionData(res);
-        addToast(`AI calculated fair price of $${res.suggestedPrice}`, 'info');
+        addToast(res.isAiAligned ? `Domain-Aligned AI suggested $${res.suggestedPrice}` : `Calculated fair price of $${res.suggestedPrice}`, 'info');
       }
     } catch (err) {
       console.error('Failed to get suggested price:', err);
@@ -146,36 +146,47 @@ export default function CounterOfferModal({ request, isOpen, onClose, onSuccess 
               />
               {suggestionData && (
                 <span className="absolute right-3 top-2.5 text-[10px] font-semibold text-emerald-700 dark:text-emerald-400 bg-emerald-100 dark:bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-300 dark:border-emerald-500/30">
-                  AI-suggested fair price
+                  Domain-Aligned AI Suggestion
                 </span>
               )}
             </div>
 
-            {/* Heuristic breakdown display */}
+            {/* Domain-Aligned AI breakdown & reasoning display */}
             {suggestionData && (
               <div className="mt-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-emerald-200 dark:border-emerald-500/30 text-[11px] space-y-2 animate-in fade-in duration-200">
                 <div className="flex items-center justify-between font-bold text-emerald-800 dark:text-emerald-300">
                   <span className="flex items-center gap-1.5">
-                    <Sparkles className="w-3.5 h-3.5 text-amber-500 dark:text-amber-400" /> AI Pricing Analysis
+                    <Sparkles className="w-3.5 h-3.5 text-amber-500 dark:text-amber-400" /> Domain-Aligned AI Suggestion
                   </span>
-                  <span className="text-slate-900 dark:text-white">${suggestionData.suggestedPrice}</span>
+                  <span className="text-slate-900 dark:text-white font-extrabold text-sm">${suggestionData.suggestedPrice}</span>
                 </div>
+
+                {/* Model Reasoning Text */}
+                {(suggestionData.reasoning || suggestionData.explanation) && (
+                  <div className="p-2.5 rounded-lg bg-emerald-500/10 dark:bg-emerald-500/15 border border-emerald-500/25 text-slate-800 dark:text-emerald-100 text-xs leading-relaxed">
+                    <span className="font-bold block text-[10px] text-emerald-700 dark:text-emerald-400 mb-0.5 uppercase tracking-wider">
+                      {suggestionData.isAiAligned ? 'Domain-Aligned Model Reasoning' : 'Market Norms Reasoning'}
+                    </span>
+                    {suggestionData.reasoning || suggestionData.explanation}
+                  </div>
+                )}
+
                 <div className="grid grid-cols-3 gap-2 pt-1 text-[10px] border-t border-slate-200 dark:border-slate-700/60">
                   <div className="bg-white dark:bg-slate-900/60 p-1.5 rounded-lg border border-slate-200 dark:border-slate-800">
-                    <span className="block text-slate-500 dark:text-slate-400">40% Listed</span>
+                    <span className="block text-slate-500 dark:text-slate-400">Listed Rate</span>
                     <span className="font-bold text-slate-800 dark:text-slate-200">${suggestionData.resourcePrice}</span>
                   </div>
                   <div className="bg-white dark:bg-slate-900/60 p-1.5 rounded-lg border border-slate-200 dark:border-slate-800">
-                    <span className="block text-slate-500 dark:text-slate-400">30% Market</span>
+                    <span className="block text-slate-500 dark:text-slate-400">Category Avg</span>
                     <span className="font-bold text-slate-800 dark:text-slate-200">${suggestionData.categoryPrice}</span>
                   </div>
                   <div className="bg-white dark:bg-slate-900/60 p-1.5 rounded-lg border border-slate-200 dark:border-slate-800">
-                    <span className="block text-slate-500 dark:text-slate-400">30% Seeker</span>
+                    <span className="block text-slate-500 dark:text-slate-400">Seeker Bid</span>
                     <span className="font-bold text-slate-800 dark:text-slate-200">${suggestionData.seekerOffer}</span>
                   </div>
                 </div>
                 <p className="text-[10px] text-slate-500 dark:text-slate-400 italic">
-                  Auto-filled as AI-suggested fair price. You can still adjust this manually before sending.
+                  Auto-filled as Domain-Aligned AI Suggestion. You can adjust this manually before sending.
                 </p>
               </div>
             )}

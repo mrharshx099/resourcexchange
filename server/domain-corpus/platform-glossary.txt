@@ -1,0 +1,24 @@
+# ResourceXchange Platform Domain Glossary & System Terminology
+
+This glossary defines standard terminology used within the ResourceXchange hospitality asset sharing and marketplace platform:
+
+1. RFQ & Wanted Board:
+The "Wanted Board" is the inverse matching mechanism where hospitality seekers broadcast unmet resource requirements (Requests For Quotation / RFQ) when available catalog listings do not meet their specific geographic, temporal, or capacity constraints. Providers browse the Wanted Board and submit proactive bids or propose private unlisted assets to fulfill the seeker's criteria.
+
+2. Conflict-Free Availability & Blackout Dates:
+- Availability Slots: Atomic calendar time blocks that track whether an asset is available, held under a pending inquiry, or booked.
+- Blackout Dates: Dates reserved by the asset owner for in-house events, deep sanitization, annual kitchen maintenance, or peak season private use. Listings automatically block out dates that conflict with existing approved reservations, providing a 100% Zero Double-Booking Guarantee.
+- Turnover Buffer: An automated operational buffer (e.g. 2-4 hours) enforced between consecutive bookings to allow post-event cleaning, kitchen degreasing, or AV equipment restacking.
+
+3. Counter-Offer & Smart Negotiation Protocol:
+When a seeker submits an offer differing from the listed rack rate, the provider can accept, decline, or issue a formal Counter-Offer with custom pricing and accompanying notes. Counter-offers hold the dates under a provisional option until the seeker accepts or the negotiating window expires. The Domain-Aligned AI analyzes the listed rate, category median, and seeker bid to recommend a fair, balanced settlement price.
+
+4. Transport & Logistics Add-On:
+A first-class marketplace capability allowing seekers booking physical equipment, banquet furniture, or mobile culinary gear to request delivery and logistics directly on the booking modal:
+- Haversine Distance: Geodesic distance in kilometers calculated between the seeker's business coordinates and the provider's resource address.
+- Base Logistics Fee: Standard fixed dispatch and handling charge (default $25) covering vehicle staging and initial cargo strap-down.
+- Distance Rate: Variable per-kilometer rate (e.g., $2.50 to $3.50/km) reflecting fuel, driver time, and vehicle wear.
+- Logistics Notes: Special handling instructions specifying tailgate requirements, loading dock ramp access, refrigeration setpoints, or gate passcodes.
+
+5. Bundle Requests & Cross-Category Stacking:
+Event organizers frequently require complementary assets concurrently—such as pairing a banquet hall with an overflow commercial kitchen, AV line array, and guest valet lot. Bundle requests allow multi-resource inquiries to synchronize calendar reservations across multiple distinct providers for a single event timeline.
